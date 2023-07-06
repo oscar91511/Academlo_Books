@@ -27,6 +27,8 @@ const fruts = [        //* List of fruits
   &nbsp;
   <button @click="decrementar">Decrementar</button>
 
+  <div v-if="contador == 5"> It's my lucky counter number </div>
+
   <ul>
     
     <li v-for="frut in fruts" :key="frut.id">{{ frut.name }}</li>
