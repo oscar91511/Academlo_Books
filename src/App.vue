@@ -18,7 +18,7 @@ import { RouterLink, RouterView } from "vue-router"; //* in javaScript we use im
           <RouterLink to="#" data-item="Books">Books</RouterLink>
         </li>
         <li>
-          <RouterLink to="/AuthorLayout" data-item="Autors">Autors</RouterLink>
+          <RouterLink to="/Authors" data-item="Authors">Authors</RouterLink>
         </li>
       </ul>
     </nav>

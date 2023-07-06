@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div>Authors</div>
+  <h1>Authors</h1>
 
   <RouterView />
 </template>
