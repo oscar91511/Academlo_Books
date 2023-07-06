@@ -1,0 +1,107 @@
+//* Ts es tipeScript / Ts are tipeScript
+<script setup lang="ts">
+import { RouterLink, RouterView } from "vue-router"; //* in javaScript we use import into script
+</script>
+
+//* html
+<template>
+  <div>Filling the text on hover</div>
+  <p data-item=" AcademloBooks">AcademloBooks</p>
+
+  <section>
+    <nav>
+      <ul class="menuItems">
+        <li>
+          <RouterLink to="/" data-item="Home">Home</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="#" data-item="Books">Books</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/AuthorLayout" data-item="Autors">Autors</RouterLink>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <router-view />
+</template>
+
+//* Scope uso del CSS local / use scope for local work whit css
+<style scoped>
+div {
+  color: #727272;
+  text-align: center;
+}
+
+p {
+  margin: 16px;
+  font-size: 96px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+p::before {
+  content: attr(data-item);
+  transition: all 1s ease-in-out;
+  color: #8254ff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+p:hover::before {
+  width: 100%;
+}
+
+nav {
+  margin: 25px;
+  background: #f9f9f9;
+  padding: 16px;
+}
+
+nav .menuItems {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .menuItems li {
+  margin: 50px;
+}
+
+nav .menuItems li a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+
+nav .menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: #8254ff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+nav .menuItems li a:hover::before {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+</style>
