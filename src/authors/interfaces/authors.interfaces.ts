@@ -1,4 +1,4 @@
-import { Book } from "../../books/interfaces/books.interfaces";
+import type { Book } from "../../books/interfaces/books.interfaces";
 
 export interface AuthorsResAPI {
   status: string;

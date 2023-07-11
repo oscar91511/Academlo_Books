@@ -1,1 +1,17 @@
-const numeros: number[] = [1, 2, 3, 4, 5];
+import type { Author } from "./../authors/interfaces/authors.interfaces";
+import { defineStore } from "pinia";
+import { ref } from "vue";
+
+export const useAuthorsStore = defineStore("authors", () => {
+  const authors = ref<Author[]>();
+
+  return {
+    authors,
+//* Actions / Acciones
+
+    setAuthors(newAuthors: Author[]) {
+        authors.value = newAuthors;
+    },
+
+  };
+});
