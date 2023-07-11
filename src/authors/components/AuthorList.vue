@@ -13,7 +13,7 @@ props.authors
 <template>
     <ul>
         <li v-for="author in props.authors" :key="author.id">
-        {{ author.name }}
+        {{ author.name }} - {{ author.surname }}
         </li>
     </ul>
 </template>
