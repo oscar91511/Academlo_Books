@@ -1,27 +1,21 @@
 <script setup lang="ts">
-import useAuthors from '../composables/useAuthors';
-import lodingModal from "../../shared/LoadingModal.vue"
-import AuthorList from "../components/AuthorList.vue"
-
+import useAuthors from "../composables/useAuthors";
+import lodingModal from "../../shared/LoadingModal.vue";
+import AuthorList from "../components/AuthorList.vue";
 
 const { authors, isLoading } = useAuthors();
-
 </script>
+
 <template>
   <h2>Listado de autores</h2>
 
-  
- //* Authors lists / Lista de Autores
+  //* Authors lists / Lista de Autores
 
-<AuthorList :authors="authors!" />
+  <AuthorList :authors="authors!" />
 
- //* Loading 
+  //* Loading
 
-
-<lodingModal v-if="isLoading" />
+  <lodingModal v-if="isLoading" />
 </template>
- 
-
-
 
 <style scoped></style>
