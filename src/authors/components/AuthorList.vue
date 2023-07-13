@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import type { Author } from '../interfaces/authors.interfaces'
+  import { RouterLink } from "vue-router"
 
 interface Props {
     authors: Author[]
@@ -13,7 +14,13 @@ props.authors
 <template>
     <ul>
         <li v-for="author in props.authors" :key="author.id">
-        {{ author.name }} - {{ author.surname }}
+        <RouterLink :to="{
+            name: 'author-detail',
+            params: { id: author.id},
+        }"
+        >
+            {{ author.name }} - {{ author.surname }}
+        </RouterLink>
         </li>
     </ul>
 </template>
