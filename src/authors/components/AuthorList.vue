@@ -15,7 +15,7 @@ props.authors
     <ul>
         <li v-for="author in props.authors" :key="author.id">
         <RouterLink :to="{
-            name: 'author-detail',
+            name: 'authors-detail',
             params: { id: author.id},
         }"
         >
